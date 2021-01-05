@@ -86,8 +86,8 @@ module.exports = class extends Component {
                     {/* Content/Excerpt */}
                     <div class="content" dangerouslySetInnerHTML={{ __html: index && page.excerpt ? page.excerpt : page.content }}></div>
                     {/* Licensing block */}
-                    {!index && article && article.licenses && Object.keys(article.licenses)
-                        ? <ArticleLicensing.Cacheable page={page} config={config} helper={helper} /> : null}
+                    {/* {!index && article && article.licenses && Object.keys(article.licenses)
+                        ? <ArticleLicensing.Cacheable page={page} config={config} helper={helper} /> : null} */}
                     {/* Tags */}
                     {!index && page.tags && page.tags.length ? <div class="article-tags is-size-7 mb-4">
                         <span class="mr-2">#</span>
@@ -98,11 +98,11 @@ module.exports = class extends Component {
                     {/* "Read more" button */}
                     {index && page.excerpt ? <a class="article-more button is-small is-size-7" href={`${url_for(page.link || page.path)}#more`}>{__('article.more')}</a> : null}
                     {/* Share button */}
-                    {!index ? <Share config={config} page={page} helper={helper} /> : null}
+                    {/* {!index ? <Share config={config} page={page} helper={helper} /> : null} */}
                 </article>
             </div>
             {/* Donate button */}
-            {!index ? <Donates config={config} helper={helper} /> : null}
+            {/* {!index ? <Donates config={config} helper={helper} /> : null} */}
             {/* Post navigation */}
             {!index && (page.prev || page.next) ? <nav class="post-navigation mt-4 level is-mobile">
                 {page.prev ? <div class="level-start">
@@ -119,7 +119,7 @@ module.exports = class extends Component {
                 </div> : null}
             </nav> : null}
             {/* Comment */}
-            {!index ? <Comment config={config} page={page} helper={helper} /> : null}
+            {/* {!index ? <Comment config={config} page={page} helper={helper} /> : null} */}
         </Fragment>;
     }
 };
